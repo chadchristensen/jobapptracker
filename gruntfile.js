@@ -7,11 +7,7 @@ module.exports = function(grunt) {
       },
       dist : {
         src: ['src/client/scripts/*.js'],
-        dest: 'dist/development/js/script.js'
-      },
-      prod : {
-        src: ['src/client/scripts/*.js'],
-        dest: 'dist/production/js/script.js'
+        dest: 'dist/development/js/app.js'
       }
     }, // concat
 
@@ -51,12 +47,24 @@ module.exports = function(grunt) {
         }
       }
     }, // connect
+
+    browserify: {
+      dist: {
+        options: {
+           transform: [['babelify', {presets: ['es2015', 'react']}]]
+        },
+        src: ['src/client/scripts/app.js'],
+        dest: 'dist/development/js/app.js',
+      }
+    }, // browserify
+
   }); // initConfig
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-browserify');
 
-  grunt.registerTask('default', ['concat', 'sass', 'connect', 'watch']);
+  grunt.registerTask('default', ['concat', 'sass', 'browserify', 'connect', 'watch']);
 }; // Wrapper function
