@@ -1,0 +1,29 @@
+{
+  "name": "jobapptracker",
+  "version": "0.0.1",
+  "description": "Users can track their job application progress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadchristensen/jobapptracker.git"
+  },
+  "author": "Victor Learned and Chad Christensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chadchristensen/jobapptracker/issues"
+  },
+  "homepage": "https://github.com/chadchristensen/jobapptracker#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^6.0.0"
+  }
+}
