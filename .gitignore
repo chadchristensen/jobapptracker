@@ -38,3 +38,4 @@ jspm_packages
 
 # Added by Chad
 .DS_Store
+.babelrc
